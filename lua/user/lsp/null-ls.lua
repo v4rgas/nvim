@@ -21,7 +21,7 @@ null_ls.setup {
     formatting.stylua,
 
     -- js
-    formatting.eslint,
+    formatting.eslint_d,
     diagnostics.eslint,
 
     -- python
