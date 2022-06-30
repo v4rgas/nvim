@@ -1,6 +1,6 @@
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
-  return
+	return
 end
 
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
@@ -10,23 +10,25 @@ local diagnostics = null_ls.builtins.diagnostics
 
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
 -- npm install --save-dev prettier prettier-plugin-solidity
-null_ls.setup {
-  debug = false,
-  sources = {
-    -- formatting.prettier.with {
-    --   extra_filetypes = { "toml", "solidity" },
-    --   extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
-    -- },
-    -- lua
-    formatting.stylua,
+null_ls.setup({
+	debug = false,
+	sources = {
+		-- css
+		formatting.prettier.with({
+			extra_filetypes = { "css" },
+		}),
 
-    -- js
-    formatting.eslint_d,
-    diagnostics.eslint,
+		-- markdown
+		-- diagnostics.markdownlint,
+		-- lua
+		formatting.stylua,
 
-    -- python
-    formatting.autopep8,
-    diagnostics.flake8,
-    
-  },
-}
+		-- js
+		formatting.eslint_d,
+		diagnostics.eslint,
+
+		-- python
+		formatting.autopep8,
+		diagnostics.flake8,
+	},
+})
