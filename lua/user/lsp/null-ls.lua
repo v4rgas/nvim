@@ -10,8 +10,8 @@ local completion = null_ls.builtins.completion
 null_ls.setup({
 	debug = false,
 	sources = {
-    -- general spell
-    -- completion.codespell,
+		-- general spell
+		-- completion.codespell,
 
 		-- css
 		formatting.prettier.with({
