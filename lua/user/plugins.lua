@@ -92,9 +92,6 @@ return packer.startup(function(use)
 	use({ "rcarriga/nvim-dap-ui" })
 	use({ "ravenxrz/DAPInstall.nvim" })
 
-	--Misc
-	use({ "iamcco/markdown-preview.nvim" })
-
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
