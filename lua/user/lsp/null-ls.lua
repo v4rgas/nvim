@@ -13,6 +13,9 @@ null_ls.setup({
 		-- general spell
 		-- completion.codespell,
 
+		-- latex
+		formatting.latexindent,
+
 		-- css
 		formatting.prettier.with({
 			extra_filetypes = { "css" },
