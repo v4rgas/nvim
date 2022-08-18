@@ -33,5 +33,9 @@ null_ls.setup({
 		-- python
 		formatting.autopep8,
 		diagnostics.flake8,
+
+		-- C
+		formatting.clang_format,
+		diagnostics.cppcheck,
 	},
 })
